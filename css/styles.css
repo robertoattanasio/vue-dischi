@@ -17,6 +17,7 @@ body {
     width: 100%;
     height: 100vh;
     background-color: var(--dark-blue);
+    font-family: 'Lato', sans-serif;
 }
 
 .main_wrapper {
@@ -46,8 +47,9 @@ img.logo {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    width: 270px;
-    height: 450px;
+    justify-content: space-between;
+    width: 220px;
+    height: 400px;
     margin: 10px;
     padding: 20px;
     background-color: var(--trans-white);
@@ -60,4 +62,27 @@ img.logo {
 .album_cover img {
     width: 100%;
     object-fit: cover;
+}
+
+h2.album_title {
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    color: lightgray;
+    font-size: 18px;
+}
+
+h3.album_author {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: gray;
+    font-size: 14px;
+}
+
+h4.album_year {
+    width: 100%;
+    text-align: center;
+    color: gray;
+    font-size: 12px;
 }
