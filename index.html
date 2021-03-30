@@ -25,29 +25,38 @@
 <body>
     <div id="app">
         <div class="main_wrapper">
+            <!-- NAVBAR -->
             <div class="navbar">
                 <img src="img/spotify_logo.svg" alt="Spotify Logo" class="logo">
             </div>
+
+            <!-- ALBUM CONTAINER -->
             <div class="album_container">
 
+                <!-- ALBUM ITEM -->
                 <div v-for="disc in albumList" class="album_item">
+                    <!-- COVER -->
                     <div class="album_cover">
                         <img :src="disc.poster" alt="">
                     </div>
+
+                    <!-- TITLE -->
                     <h2 class="album_title">{{disc.title}}</h2>
 
+                    <!-- INFO -->
                     <div class="album_info">
                         <h3 class="album_author">{{disc.author}}</h3>
                         <h4 class="album_year">{{disc.year}}</h4>
                     </div>
-
-
-
-
                 </div>
+                <!-- FINE ALBUM ITEM -->
             </div>
+            <!-- FINE ALBUM CONTAINER -->
         </div>
+        <!-- FINE MAIN WRAPPER -->
     </div>
+
+    <!-- SCRIPT MAIN.JS -->
     <script src="js/main.js"></script>
 </body>
 

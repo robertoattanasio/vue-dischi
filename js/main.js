@@ -9,7 +9,6 @@ var app = new Vue({
             .get('https://flynn.boolean.careers/exercises/api/array/music')
             .then((element) => {
                 this.albumList = element.data.response;
-                console.log(this.albumList);
             })
     },
 });
