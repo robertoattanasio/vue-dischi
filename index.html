@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- AXIOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+
+    <!-- VUE JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+    <!-- STYLESHEET CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Vue Spotify</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="main_wrapper">
+            <div class="navbar">
+                <img src="img/spotify_logo.svg" alt="Spotify Logo" class="logo">
+            </div>
+            <div class="album_container">
+
+                <div v-for="disc in albumList" class="album_item">
+
+                    <div class="album_cover">
+                        <img :src="disc.poster" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
