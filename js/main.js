@@ -16,6 +16,12 @@ var app = new Vue({
                     this.albumGenresFiltered.push(element);
                 }
             });
+        },
+
+        sortByYear: function() {
+            this.albumList.sort(function(a, b) {
+                return a.year - b.year;
+            });
         }
     },
 

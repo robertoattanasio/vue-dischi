@@ -31,6 +31,7 @@
                 <select name="" id="genres" v-model="selectedGenre" @change="selectGenre(selectedGenre)">
                     <option v-for="genre in albumGenres" :value="genre">{{genre}}</option>
                 </select>
+                <button @click="sortByYear">Ordina</button>
             </div>
 
             <!-- ALBUM CONTAINER -->
