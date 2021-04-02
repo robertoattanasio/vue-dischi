@@ -34,7 +34,7 @@
                 <button id="orderByYear" @click="sortByYear">Order by Year</button>
             </div>
 
-            <!-- ALBUM CONTAINER -->
+            <!-- ALBUM CONTAINER if genres = ALL -->
             <div v-if="selectedGenre==='All'" class="album_container">
                 <!-- ALBUM ITEM -->
                 <div v-for="disc in albumList" class="album_item">
@@ -56,7 +56,7 @@
             </div>
             <!-- FINE ALBUM CONTAINER -->
 
-            <!-- ALBUM CONTAINER -->
+            <!-- ALBUM CONTAINER if genres != All -->
             <div v-else class="album_container">
                 <!-- ALBUM ITEM -->
                 <div v-for="disc in albumGenresFiltered" class="album_item">
@@ -79,7 +79,6 @@
             <!-- FINE ALBUM CONTAINER -->
         </div>
     </div>
-
     <!-- FINE MAIN WRAPPER -->
     </div>
 
