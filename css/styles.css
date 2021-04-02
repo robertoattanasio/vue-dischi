@@ -10,7 +10,9 @@
 
 :root {
     --dark-blue: #212d3a;
+    --main-green: #65d26e;
     --trans-white: rgba(150, 150, 150, 0.1);
+    --trans-main: 200ms;
 }
 
 body {
@@ -27,9 +29,41 @@ body {
 
 .navbar {
     display: flex;
+    align-items: center;
     height: 60px;
     width: 100%;
     background-color: var(--trans-white);
+}
+
+.navbar #selectGenre {
+    padding: 5px 8px;
+    outline-style: none;
+    outline-width: 0;
+    outline-color: transparent;
+    border: 0;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    background-color: var(--dark-blue);
+}
+
+.navbar #orderByYear {
+    padding: 5px 8px;
+    margin-left: 10px;
+    outline-style: none;
+    outline-width: 0;
+    outline-color: transparent;
+    border-radius: 3px;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    background-color: var(--dark-blue);
+    transition: var(--trans-main);
+}
+
+#orderByYear:hover {
+    cursor: pointer;
+    color: var(--main-green);
 }
 
 img.logo {

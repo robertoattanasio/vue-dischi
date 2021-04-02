@@ -22,6 +22,9 @@ var app = new Vue({
             this.albumList.sort(function(a, b) {
                 return a.year - b.year;
             });
+            this.albumGenresFiltered.sort(function(a, b) {
+                return a.year - b.year;
+            });
         }
     },
 

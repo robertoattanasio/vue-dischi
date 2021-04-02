@@ -28,10 +28,10 @@
             <!-- NAVBAR -->
             <div class="navbar">
                 <img src="img/spotify_logo.svg" alt="Spotify Logo" class="logo">
-                <select name="" id="genres" v-model="selectedGenre" @change="selectGenre(selectedGenre)">
+                <select id="selectGenre" v-model="selectedGenre" @change="selectGenre(selectedGenre)">
                     <option v-for="genre in albumGenres" :value="genre">{{genre}}</option>
                 </select>
-                <button @click="sortByYear">Ordina</button>
+                <button id="orderByYear" @click="sortByYear">Order by Year</button>
             </div>
 
             <!-- ALBUM CONTAINER -->
