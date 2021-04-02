@@ -28,36 +28,62 @@
             <!-- NAVBAR -->
             <div class="navbar">
                 <img src="img/spotify_logo.svg" alt="Spotify Logo" class="logo">
+                <select name="" id="genres" v-model="selectedGenre" @change="selectGenre(selectedGenre)">
+                    <option v-for="genre in albumGenres" :value="genre">{{genre}}</option>
+                </select>
             </div>
 
             <!-- ALBUM CONTAINER -->
-            <div class="album_container">
-
+            <div v-if="selectedGenre==='All'" class="album_container">
                 <!-- ALBUM ITEM -->
                 <div v-for="disc in albumList" class="album_item">
                     <!-- COVER -->
-                    <div class="album_cover">
+                    <div class="album_cover ">
                         <img :src="disc.poster" alt="">
                     </div>
 
                     <!-- TITLE -->
-                    <h2 class="album_title">{{disc.title}}</h2>
+                    <h2 class="album_title ">{{disc.title}}</h2>
 
                     <!-- INFO -->
-                    <div class="album_info">
-                        <h3 class="album_author">{{disc.author}}</h3>
-                        <h4 class="album_year">{{disc.year}}</h4>
+                    <div class="album_info ">
+                        <h3 class="album_author ">{{disc.author}}</h3>
+                        <h4 class="album_year ">{{disc.year}}</h4>
+                    </div>
+                </div>
+                <!-- FINE ALBUM ITEM -->
+            </div>
+            <!-- FINE ALBUM CONTAINER -->
+
+            <!-- ALBUM CONTAINER -->
+            <div v-else class="album_container">
+                <!-- ALBUM ITEM -->
+                <div v-for="disc in albumGenresFiltered" class="album_item">
+                    <!-- COVER -->
+                    <div class="album_cover ">
+                        <img :src="disc.poster" alt="">
+                    </div>
+
+                    <!-- TITLE -->
+                    <h2 class="album_title ">{{disc.title}}</h2>
+
+                    <!-- INFO -->
+                    <div class="album_info ">
+                        <h3 class="album_author ">{{disc.author}}</h3>
+                        <h4 class="album_year ">{{disc.year}}</h4>
                     </div>
                 </div>
                 <!-- FINE ALBUM ITEM -->
             </div>
             <!-- FINE ALBUM CONTAINER -->
         </div>
-        <!-- FINE MAIN WRAPPER -->
+    </div>
+
+    <!-- FINE MAIN WRAPPER -->
     </div>
 
     <!-- SCRIPT MAIN.JS -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js "></script>
 </body>
 
 </html>

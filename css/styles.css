@@ -26,6 +26,7 @@ body {
 }
 
 .navbar {
+    display: flex;
     height: 60px;
     width: 100%;
     background-color: var(--trans-white);
